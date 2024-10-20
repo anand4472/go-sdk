@@ -19,7 +19,7 @@ require (
 	github.com/tyler-smith/go-bip39 v1.1.0
 	github.com/valyala/fasthttp v1.2.0
 	github.com/valyala/fastjson v1.6.3
-	github.com/zennittians/bls v0.0.8
+	github.com/zennittians/bls v0.0.6
 	github.com/zennittians/intelchain v1.10.0
 	golang.org/x/crypto v0.23.0
 )

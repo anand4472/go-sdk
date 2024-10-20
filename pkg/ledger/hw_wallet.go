@@ -117,7 +117,7 @@ func SignTx(tx *types.Transaction, chainID *big.Int) ([]byte, string, error) {
 	}
 
 	pubBytes := crypto.Keccak256(pubkey[1:65])[12:]
-	signerAddr, _ := address.ConvertAndEncode("one", pubBytes)
+	signerAddr, _ := address.ConvertAndEncode("itc", pubBytes)
 
 	var r, s, v *big.Int
 	if chainID != nil {
@@ -217,7 +217,7 @@ func SignStakingTx(tx *staking.StakingTransaction, chainID *big.Int) (*staking.S
 	}
 
 	pubBytes := crypto.Keccak256(pubkey[1:65])[12:]
-	signerAddr, _ := address.ConvertAndEncode("one", pubBytes)
+	signerAddr, _ := address.ConvertAndEncode("itc", pubBytes)
 
 	// WithSignature returns a new transaction with the given signature.
 	rawTx, err := tx.WithSignature(staking.NewEIP155Signer(chainID), sig[:])
