@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"github.com/pkg/errors"
-	"github.com/zennittians/go-sdk/pkg/address"
+	// "github.com/pkg/errors"
+	// "github.com/zennittians/go-sdk/pkg/address"
 	"github.com/zennittians/go-sdk/pkg/common"
 	"github.com/zennittians/go-sdk/pkg/validation"
 )
@@ -20,10 +20,11 @@ func (itcAddress *itcAddress) Set(s string) error {
 	if err != nil {
 		return err
 	}
-	_, err = address.Bech32ToAddress(s)
-	if err != nil {
-		return errors.Wrap(err, "not a valid ITC Address")
-	}
+
+	// _, err = address.Bech32ToAddress(s)
+	// if err != nil {
+	// 	return errors.Wrap(err, "not a valid ITC Address")
+	// }
 	itcAddress.address = s
 	return nil
 }
